@@ -1,25 +1,25 @@
 const blocks = document.querySelectorAll(".parallax-block");
 
 blocks.forEach(block => {
-    const box = block.querySelector(".boxx"); // Select the entire box
-    const movingValue =  0.2; // Adjust this for intensity
+    const box = block.querySelector(".boxx");
+    const movingValue =  0.2;
 
     block.addEventListener("mousemove", parallax);
     
     function parallax(e) {
         const rect = block.getBoundingClientRect();
-        const x = e.clientX - rect.left; // X position within the block
-        const y = e.clientY - rect.top; // Y position within the block
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
 
-        // Calculate movement based on mouse position and data-value
+      
         const moveX = (x * movingValue);
         const moveY = (y * movingValue);
 
-        // Apply transformation to the whole box
+        // Apply transformation 
         box.style.transform = `translate(${moveX}px, ${moveY}px) scale(1.1)`;
     }
 
-    // Reset the box position when the cursor leaves the block
+    // Reset 
     block.addEventListener("mouseleave", () => {
         box.style.transform = "translate(0, 0) scale(1)";
     });
@@ -34,7 +34,7 @@ const containers=document.querySelectorAll('.hero .parallax-block');
 // Counter to track hovered blocks
 let hoverCount = 0;
 
-// Add hover event listeners for each block
+/
 blcks.forEach((block, blockIndex) => {
   block.addEventListener('mouseenter', () => {
     hoverCount++;
@@ -70,11 +70,11 @@ blcks.forEach((block, blockIndex) => {
   });
 });
 
-// Wait until the window is fully loaded
+//Window load
 window.addEventListener("load", () => {
     const images = document.querySelectorAll('.hero img');
     
-    // Add a class to each image to start the animation
+  
     images.forEach(img => {
       img.classList.add("animate-in");
     });
