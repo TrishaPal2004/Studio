@@ -1,0 +1,243 @@
+@font-face {
+  font-family: DrukWideBold;
+  src: url(DrukWideBold.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  height: fit-content;
+  box-sizing: border-box;
+}
+
+.hero {
+  width: 100%;
+  height: 140vh;
+  background: rgb(8, 6, 6);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+  width: 100vw;
+}
+
+.text {
+  height: min-content;
+  -webkit-font-smoothing: antialiased;
+  font-size:120px;
+  z-index: 2;
+  font-weight: 500;
+  font-family: DrukWideBold;
+  color: rgb(255, 255, 255);
+  text-anchor: middle;
+  line-height: 98%;
+  font-style: normal;
+  position: relative;
+  background: none;
+  font-stretch:extra-expanded;
+  pointer-events: none; /* Allows clicks to pass through */
+  
+}
+.hover-effect{
+  z-index: 1;
+  color: rgb(8,6,6);
+  text-shadow: 
+      -2px -2px 0 rgb(74, 72, 72),
+      2px -2px 0 rgb(71, 69, 69),
+      -2px 2px 0 rgb(74, 70, 70),
+      2px 2px 0 rgb(70, 67, 67);
+  transform: scale(1.0); /* Add scale effect on hover */
+}
+
+.block1,
+.block2,
+.block3,
+.block4 {
+  position: absolute;
+  z-index: 1;
+  transition: all 12s ease; /* Add smooth transition */
+}
+
+.block1 {
+  width: 47.5vh;
+  height: 27vh;
+  display: flex;
+  top: 41vh;
+  left: 16vh;
+}
+
+.block2 {
+  width: 58vh;
+  height: 34vh;
+  top: 18.4vh;
+  display: flex;
+  right: 45vh;
+}
+
+.block3 {
+  width: 50vh;
+  height: 30vh;
+  top: 96vh;
+  display: flex;
+  left: 21vh;
+}
+
+.block4 {
+  width: 50vh;
+  height: 30vh;
+  top: 72vh;
+  display: flex;
+  right: 26vh;
+}
+
+/* Apply hover effects to both blocks and their images */
+.block1:hover,
+.block2:hover,
+.block3:hover,
+.block4:hover {
+  position: absolute;
+  z-index: 3;
+  transform: scale(1.0); /* Add scale effect on hover */
+}
+
+
+  
+.block1 img,
+.block2 img,
+.block3 img,
+.block4 img {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  object-fit: cover;
+  align-items: center;
+  transition: all 0.4s ease; /* Add smooth transition */
+}
+
+/* Add hover effects specifically for images */
+.block1:hover img,
+.block2:hover img,
+.block3:hover img,
+.block4:hover img {
+  z-index: 4;
+  transform: scale(1); /* Scale up image slightly */
+  filter: brightness(1.1); /* Brighten image slightly */
+}
+
+.parallax-block {
+  transition: transform 0.3s ease; /* Smooth transitions for parallax effect */
+}
+.text1{
+  height: fit-content;
+}
+.subtext1{
+  height: fit-content;
+}
+.block1 .line1 {
+  position: absolute;
+  top: 24vh; /* Adjust as needed */
+  left: 32vh; /* Adjust as needed */
+  display: flex; /* Use flex to stack elements if needed */
+  flex-direction: column; /* Stack vertically */
+  align-items: center; /* Center align items */
+  color: white; /* Text color */
+  font-size: 20px; /* Font size */
+  z-index: 5;
+}
+.block2 .line1 {
+  position: absolute;
+  top: 32vh; /* Adjust as needed */
+  left: 42vh; /* Adjust as needed */
+  display: flex; /* Use flex to stack elements if needed */
+  flex-direction: column; /* Stack vertically */
+  align-items: center; /* Center align items */
+  color: white; /* Text color */
+  font-size: 20px; /* Font size */
+  z-index: 5;
+}
+.block3 .line1 {
+  position: absolute;
+  top: 24vh; /* Adjust as needed */
+  left: 32vh; /* Adjust as needed */
+  display: flex; /* Use flex to stack elements if needed */
+  flex-direction: column; /* Stack vertically */
+  align-items: center; /* Center align items */
+  color: white; /* Text color */
+  font-size: 20px; /* Font size */
+  z-index: 5;
+}
+.block4 .line1 {
+  position: absolute;
+  top: 23vh; /* Adjust as needed */
+  left: 32vh; /* Adjust as needed */
+  display: flex; /* Use flex to stack elements if needed */
+  flex-direction: column; /* Stack vertically */
+  align-items: center; /* Center align items */
+  color: white; /* Text color */
+  font-size: 20px; /* Font size */
+  z-index: 5;
+}
+.text1{
+    font-size: 2rem;
+    font-family: DrukWideBold;
+    font-weight: bold;
+}
+.subtext1{
+    font-size: 0.8rem;
+    width: 300px;
+}
+
+
+.boxx {
+    text-align: center;
+    transition: transform 1.5s cubic-bezier(0.25, 1, 0.5, 1); /* Smooth float-back easing */
+  }
+.boxx .line1 {
+  opacity: 0;
+}
+.boxx:hover .line1 {
+  opacity: 1;
+}
+
+
+
+/* Basic styling for blocks and images */
+/* Add a border to images with the 'outline-image' class */
+.outline-image {
+ 
+  transition: filter 0.3s ease; /* Smooth transition for the border */
+  position: relative; /* Ensure positioning context */
+  z-index: 1; /* Ensure it stays above other elements */
+  
+}
+
+/* Ensure images take full space and are styled correctly */
+.block img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: all 0.3s ease; /* Transition for hover effects */
+}
+
+.z-10{
+  z-index: 10;
+}
+/* Apply initial scaling to images */
+.hero img {
+  transform: scale(0.6); /* Smaller size to start */
+  opacity: 0;
+  transition: transform 1.5s ease-out, opacity 1.5s ease-out; /* Smooth transition */
+}
+
+.hero img.animate-in {
+  transform: scale(1); /* Full size */
+  opacity: 1; /* Fully visible */
+}
