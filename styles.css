@@ -53,7 +53,7 @@
       2px -2px 0 rgb(71, 69, 69),
       -2px 2px 0 rgb(74, 70, 70),
       2px 2px 0 rgb(70, 67, 67);
-  transform: scale(1.0); /* Add scale effect on hover */
+  transform: scale(1.0); 
 }
 
 .block1,
@@ -62,7 +62,7 @@
 .block4 {
   position: absolute;
   z-index: 1;
-  transition: all 12s ease; /* Add smooth transition */
+  transition: all 12s ease; 
 }
 
 .block1 {
@@ -97,14 +97,14 @@
   right: 26vh;
 }
 
-/* Apply hover effects to both blocks and their images */
+
 .block1:hover,
 .block2:hover,
 .block3:hover,
 .block4:hover {
   position: absolute;
   z-index: 3;
-  transform: scale(1.0); /* Add scale effect on hover */
+  transform: scale(1.0); 
 }
 
 
@@ -118,21 +118,21 @@
   display: flex;
   object-fit: cover;
   align-items: center;
-  transition: all 0.4s ease; /* Add smooth transition */
+  transition: all 0.4s ease; 
 }
 
-/* Add hover effects specifically for images */
+
 .block1:hover img,
 .block2:hover img,
 .block3:hover img,
 .block4:hover img {
   z-index: 4;
-  transform: scale(1); /* Scale up image slightly */
-  filter: brightness(1.1); /* Brighten image slightly */
+  transform: scale(1);
+  filter: brightness(1.1);
 }
 
 .parallax-block {
-  transition: transform 0.3s ease; /* Smooth transitions for parallax effect */
+  transition: transform 0.3s ease; 
 }
 .text1{
   height: fit-content;
@@ -142,46 +142,46 @@
 }
 .block1 .line1 {
   position: absolute;
-  top: 24vh; /* Adjust as needed */
-  left: 32vh; /* Adjust as needed */
-  display: flex; /* Use flex to stack elements if needed */
-  flex-direction: column; /* Stack vertically */
-  align-items: center; /* Center align items */
-  color: white; /* Text color */
-  font-size: 20px; /* Font size */
+  top: 24vh;
+  left: 32vh;
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+  color: white; 
+  font-size: 20px; 
   z-index: 5;
 }
 .block2 .line1 {
   position: absolute;
-  top: 32vh; /* Adjust as needed */
-  left: 42vh; /* Adjust as needed */
-  display: flex; /* Use flex to stack elements if needed */
-  flex-direction: column; /* Stack vertically */
-  align-items: center; /* Center align items */
-  color: white; /* Text color */
-  font-size: 20px; /* Font size */
+  top: 32vh; 
+  left: 42vh;
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  color: white; 
+  font-size: 20px;
   z-index: 5;
 }
 .block3 .line1 {
   position: absolute;
-  top: 24vh; /* Adjust as needed */
-  left: 32vh; /* Adjust as needed */
-  display: flex; /* Use flex to stack elements if needed */
-  flex-direction: column; /* Stack vertically */
-  align-items: center; /* Center align items */
-  color: white; /* Text color */
-  font-size: 20px; /* Font size */
+  top: 24vh; 
+  left: 32vh;
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  color: white;
+  font-size: 20px; 
   z-index: 5;
 }
 .block4 .line1 {
   position: absolute;
-  top: 23vh; /* Adjust as needed */
-  left: 32vh; /* Adjust as needed */
-  display: flex; /* Use flex to stack elements if needed */
-  flex-direction: column; /* Stack vertically */
-  align-items: center; /* Center align items */
-  color: white; /* Text color */
-  font-size: 20px; /* Font size */
+  top: 23vh; 
+  left: 32vh; 
+  display: flex; 
+  flex-direction: column;
+  align-items: center; 
+  color: white; 
+  font-size: 20px; 
   z-index: 5;
 }
 .text1{
@@ -197,7 +197,7 @@
 
 .boxx {
     text-align: center;
-    transition: transform 1.5s cubic-bezier(0.25, 1, 0.5, 1); /* Smooth float-back easing */
+    transition: transform 1.5s cubic-bezier(0.25, 1, 0.5, 1); 
   }
 .boxx .line1 {
   opacity: 0;
@@ -208,36 +208,35 @@
 
 
 
-/* Basic styling for blocks and images */
-/* Add a border to images with the 'outline-image' class */
+
 .outline-image {
  
-  transition: filter 0.3s ease; /* Smooth transition for the border */
-  position: relative; /* Ensure positioning context */
-  z-index: 1; /* Ensure it stays above other elements */
+  transition: filter 0.3s ease; 
+  position: relative; 
+  z-index: 1;
   
 }
 
-/* Ensure images take full space and are styled correctly */
+
 .block img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: all 0.3s ease; /* Transition for hover effects */
+  transition: all 0.3s ease; 
 }
 
 .z-10{
   z-index: 10;
 }
-/* Apply initial scaling to images */
+
 .hero img {
-  transform: scale(0.6); /* Smaller size to start */
+  transform: scale(0.6); 
   opacity: 0;
-  transition: transform 1.5s ease-out, opacity 1.5s ease-out; /* Smooth transition */
+  transition: transform 1.5s ease-out, opacity 1.5s ease-out; 
 }
 
 .hero img.animate-in {
-  transform: scale(1); /* Full size */
-  opacity: 1; /* Fully visible */
+  transform: scale(1);
+  opacity: 1; 
 }
