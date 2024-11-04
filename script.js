@@ -2,7 +2,7 @@ const blocks = document.querySelectorAll(".parallax-block");
 
 blocks.forEach(block => {
     const box = block.querySelector(".boxx"); 
-    const movingValue =  0.2; 
+    const movingValue =  0.6; 
 
     block.addEventListener("mousemove", parallax);
     
